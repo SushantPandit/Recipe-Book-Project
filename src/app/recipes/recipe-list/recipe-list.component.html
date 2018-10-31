@@ -1,4 +1,18 @@
-<p>
-  recipe-list works!
-</p>
-<app-recipe-items></app-recipe-items>
+<div id="item_box">
+  <div class="items">
+    <div *ngFor="let item of recipeItems"
+         (click)="onclickofitems(item); showDisplayDiv();"
+         class="actual_item">
+      <div class="info_div">
+        <p>{{item.name}}</p>
+        <p>{{item.origin }}</p>
+      </div>
+      <div class="image_div">
+        <img src='{{item.img}}'>
+      </div>
+    </div>
+  </div>
+  <app-recipe-items [abcd]="itemitems"
+                    class="display_box"
+                    *ngIf="value"></app-recipe-items>
+</div>

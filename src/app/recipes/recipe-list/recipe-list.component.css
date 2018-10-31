@@ -1,0 +1,48 @@
+#item_box {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 50% 50%;
+  
+}
+
+.items {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  float: right;
+  padding-top: 50px;
+}
+
+.actual_item {
+  width: 25vw;
+  border: 1px solid darkgray;
+  height: 7vh;
+  margin-top: 1vh;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  float: right;
+  
+}
+
+.display_box {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.info_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.image_div img {
+  height: 4vh;
+  width: 4vw;
+}
+
+.info_div p,
+.image_div img {
+  font-size: 12px;
+  font-family: sans-serif;
+  margin: auto 5px 0px 5px;
+}

@@ -1,15 +1,18 @@
-<!-- <div>
-  <ul> 
-  <li><a>Recipe Book</a></li>
-  <li> <a>Recipes</a></li>
-  <li><a>Shopping List</a></li>
-  <li><a>Manage</a></li>
-</ul>
-</div> -->
-
 <div id="header_div">
-<div><a>Recipe Book</a></div>
-<div><a>Recipes</a></div>
-<div><a>Shopping List</a></div>
-<div><a>Manage</a></div>
+  <div id="inner_div">
+    <p class="titel">Recipe Book</p>
+    <div>
+      <a href="#"
+         [ngClass]="{name:visiablity}"
+         (click)="recipiDisplay()">Recipes</a>
+    </div>
+    <div>
+      <a href="#"
+         [ngClass]="{name:!visiablity}"
+         (click)="shopping()">Shopping List</a>
+    </div>
+  </div>
+  <p id="manage">Manage</p>
 </div>
+<app-recipes *ngIf="visiablity"></app-recipes>
+<app-shooping-list *ngIf="!visiablity"></app-shooping-list>
