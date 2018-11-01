@@ -1,3 +1,24 @@
-<p>
-  shooping-list works!
-</p>
+<div>
+  <div class="input_div">
+    <div class="data_div name_div">
+      <label for="name">Name</label>
+      <input type="text"
+             #name
+             class="name_tbox">
+    </div>
+    <div class="data_div amount_div">
+      <label for="amount">Amount</label>
+      <input type="text"
+             #amount
+             class="prise_tbox">
+    </div>
+    <div class="button_div">
+      <button (click)="addRecord(name.value,amount.value)">Add</button>
+      <button>Clear</button>
+      <button>Delete</button>
+    </div>
+  </div>
+  <div class="seprator_div"></div>
+  <div> dispaly data div</div>
+
+</div>

@@ -1,6 +1,6 @@
 <div id="header_div">
   <div id="inner_div">
-    <p class="titel">Recipe Book</p>
+    <div class="titel">Recipe Book</div>
     <div>
       <a href="#"
          [ngClass]="{name:visiablity}"
@@ -14,5 +14,5 @@
   </div>
   <p id="manage">Manage</p>
 </div>
-<app-recipes *ngIf="visiablity"></app-recipes>
-<app-shooping-list *ngIf="!visiablity"></app-shooping-list>
+<app-recipes *ngIf="!visiablity"></app-recipes>
+<app-shooping-list *ngIf="visiablity"></app-shooping-list>
